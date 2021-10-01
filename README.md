@@ -1,5 +1,5 @@
 # Code Challenge:
-I’ve tried to solve all code challenges according to the given instruction. Please check the codes & output as shared below:
+I’ve done all code challenges according to the given instruction. Please check the codes & output as shared below:
 
 # 1. PHP/HTML Code Challenge: 
 Please check my PHP/HTML code here: https://github.com/asadkuet/Code-Challenge/blob/main/1.%20PHP-HTML%20challenge.php 
