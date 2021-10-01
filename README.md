@@ -11,7 +11,7 @@ Output:
 # 2. JS/HTML/CSS Code Challenge: 
 Here's my JS/HTML/CSS code: https://github.com/asadkuet/Code-Challenge/blob/main/2.%20JS-HTML-CSS%20challenge.html
 
-Output in my JSfiddle Link: https://jsfiddle.net/qk59feLh/1/
+Output in my JSfiddle Link: https://jsfiddle.net/oLtznwc2/
 
 # 3. MySQL Challenge:
 And this is my MySQL Query: https://github.com/asadkuet/Code-Challenge/blob/main/3.%20Mysql%20Challenge.sql
