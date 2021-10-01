@@ -26,7 +26,7 @@
             const step = 10; // moving pixels per step
 
             clearInterval(id);
-            id = setInterval(playing, 100);
+            id = setInterval(playing, 1000);
             function playing() {
                 //geting position & direction along X axis
                 x_pos = getPosition(x_dir, x_pos, window.innerWidth);
