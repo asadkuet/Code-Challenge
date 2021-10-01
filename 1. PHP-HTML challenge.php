@@ -1,5 +1,5 @@
 <?php   
-class Person extends Person {
+class Person extends ArrayObject {
 	// set Key, Value to the instance
 	public function __set($name, $val) {
 		$this[$name] = $val;
@@ -27,7 +27,7 @@ class Person extends Person {
 	} 
 }
 
-// make instance of Person class which is inherited from Person class
+// make instance of Person class which is inherited from ArrayObject class
 $obj = new Person();    
 
 //set some keys & values
