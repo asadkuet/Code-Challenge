@@ -13,8 +13,8 @@ class Person extends ArrayObject {
 		
 		while($iterator->valid()) {		
 			$table .= '<tr>';
-			$table .= '<th style="border: 1px solid #ddd">' . $iterator->key() . '</th>';
-			$table .= '<td style="border: 1px solid #ddd">' . $iterator->current() . '</td>';
+			$table .= '<th style="padding: 5px; border: 1px solid #ddd">' . $iterator->key() . '</th>';
+			$table .= '<td style="padding: 5px; border: 1px solid #ddd">' . $iterator->current() . '</td>';
 			$table .= '</tr>';			
 			$iterator->next();
 		}   
