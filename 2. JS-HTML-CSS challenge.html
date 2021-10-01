@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #animate {
+        left: 0px;
+        top: 50px;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background-color: blue;
+    }
+</style>
+
+<body onload="startAnimation()">
+
+    <div id="animate"></div>
+
+    <script>
+        const startAnimation = () => {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let x_pos = 0; // initial position of x axis
+            let y_pos = 50; // initial position of y axis
+            let x_dir = 1; // moving along left to right direction by indicating with +1 and for reverse direction it's -1
+            let y_dir = 1; // moving along top to bottom direction by indicating with +1 and for reverse direction it's -1
+            const step = 10; // moving pixels per step
+
+            clearInterval(id);
+            id = setInterval(playing, 100);
+            function playing() {
+                //geting position & direction along X axis
+                x_pos = getPosition(x_dir, x_pos, window.innerWidth);
+                x_dir = getDirection(x_dir, 0, window.innerWidth, elem.offsetLeft, elem.offsetWidth);
+
+                //geting position & direction along Y axis
+                y_pos = getPosition(y_dir, y_pos, window.innerHeight);
+                y_dir = getDirection(y_dir, 50, window.innerHeight, elem.offsetTop, elem.offsetHeight);
+
+                //setting new position values
+                elem.style.left = x_pos + "px";
+                elem.style.top = y_pos + "px";   
+            }
+
+            const getPosition = (dir, pos, maxPos) =>{
+                if(dir>0){
+                    // limiting max position upto screen edge when the square crosses the edge
+                    if( pos + step + elem.offsetWidth > maxPos)
+                        return maxPos - elem.offsetWidth;
+                    else return  pos+step;
+                }
+                else return pos-step;
+            }
+
+            const getDirection = (direction, minPos, maxPos, offset, extra=0) => {
+                if(direction > 0 && (offset + extra + step) >= maxPos)
+                    return -1*direction; //reaching max edge so toggle direction
+                
+                else if(direction < 0 && offset - step <= minPos)
+                    return -1*direction; //reaching min edge so toggle direction                
+
+                return direction;                
+            }
+        }
+    </script>
+
+</body>
+
+</html>
